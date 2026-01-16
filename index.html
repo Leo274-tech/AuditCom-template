@@ -1,27 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Meta-rapport d'analyse des écosystèmes digitaux des clubs de Suisse Romande</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="src/main.js" type="module" defer></script>
 
 </head>
+
 <body>
-    <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
-    <h1 data-bind-global="count"></h1>
-    
-    <!-- id="teamList" : Conteneur où seront ajoutés dynamiquement les éléments de l'équipe. Le nom de cet ID ne doit pas être modifié. -->
-    <section id="teamList">
+    <div id="landingPageContent">
+        <section id="introduction">
+        <div id="catchypart">
+            <p id="catchphrase">Lorem ipsum dolor sit amet</p>
+            <h1>Football ?</h1>
+            <img src="./img/soccer-balloon.svg" alt="icône ballon de foot">
+        </div>
+
+        <p id="introDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Culpa magni voluptatum nulla dolor assumenda, vel quasi temporibus.
+            Possimus excepturi delectus, modi eos, ipsa voluptatem perspiciatis
+            ratione totam neque necessitatibus officia.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Odio earum id ullam? Eaque itaque suscipit repellendus quasi,</p>
+
+        <a href="#downloadForm" id="btnCTA">
+            <img src="./img/download1.svg" alt="icône téléchargement">
+            TELECHARGER<br>
+            LE RAPPORT
+        </a>
     </section>
 
-    <!-- id="messageContainer" : Conteneur pour afficher les messages de succès ou d'erreur. Le nom de cet ID ne doit pas être modifié. -->
-    <div id="messageContainer"></div>
 
-    <!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
+    <section id="keyStats">
+        <h2>Chiffres-clés</h2>
+
+        <ul>
+            <li>
+                <img src="./img/hourglass-medium.svg" alt="icône sablier">
+                <div class="statText">
+                    <p class="statValue">29 secondes</p>
+                    <p class="statDesc">c'est le temps de chargement de la page la plus lente.
+                        Bien au-delà du seuil de 10 secondes généralement admis...
+                    </p>
+                </div>
+            </li>
+            <li>
+                <img src="./img/tiktok-logo-gray.svg" alt="icône tiktok">
+                <div class="statText">
+                    <p class="statValue">73 %</p>
+                    <p class="statDesc">des clubs n'utilisent pas TikTok malgré sa popularité, 
+                        notamment chez les jeunes.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <img src="./img/shopping-cart.svg" alt="icône panier d'achat">
+                <div class="statText">
+                    <p class="statValue">2 clubs sur 3</p>
+                    <p class="statDesc">ne proposent pas de boutique e-commerce.
+                        C'est un potentiel de revenus inexploité.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <img src="./img/wheelchair.svg" alt="icône chaise roulante">
+                <div class="statText">
+                    <p class="statValue">5,2 / 10</p>
+                    <p class="statDesc">c'est le score d'accessibilité numérique de certains sites.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+
+    <section id="teams">
+        <h2>
+            <span data-bind-global="count"></span>
+            <span>équipes analysées</span>
+        </h2>
+
+        <!-- id="teamList" : Conteneur où seront ajoutés dynamiquement les éléments de l'équipe. Le nom de cet ID ne doit pas être modifié. -->
+        <div id="teamList"></div>
+    </section>
+
+
     <form id="downloadForm">
-    </form>
+        <h2>Formulaire de téléchargement</h2>
 
+        <div id="messageContainer"></div>
+
+        <div class="formGroup">
+            <label for="lastName">Nom</label>
+            <input id="lastName" type="text" name="lastName">
+        </div>
+
+        <div class="formGroup">
+            <label for="firstName">Prénom</label>
+            <input id="firstName" type="text" name="firstName">
+        </div>
+
+
+        <div class="formGroup">
+            <label for="email">Email</label>
+        <input id="email" type="email" name="email">
+        </div>
+        
+        <label for="consent">Voulez-vous vous abonner à notre newsletter ?</label>
+        <input type="checkbox" name="newsletterAgreement" id="consent">
+       
+        <button type="submit">
+            <img src="./img/downloard2.svg" alt="icône téléchargement">
+            TELECHARGER<br> 
+            LE RAPPORT
+        </button>
+    </form>
+    </div>  
+
+    <footer>
+        © AuditCom — 2026
+    </footer>
 </body>
+
 </html>

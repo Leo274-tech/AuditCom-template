@@ -1,5 +1,579 @@
 @import "reset.css";
 
-img {
-    width: 250px;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #183c78;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+#landingPageContent {
+  padding: 50px 30px;
+}
+
+section#introduction {
+  max-width: 560px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 120px;
+}
+
+#catchypart {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#catchphrase {
+  font-size: 1.1rem;
+}
+
+h1 {
+  font-size: 2.6rem;
+  line-height: 1;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding-left: 80px;
+}
+
+#catchypart > img {
+  position: absolute;
+  top: -34px;
+  right: 6px;
+
+  width: 100px;
+  max-width: 40vw;
+
+  transform: rotate(-24deg);
+}
+
+#introDescription {
+  text-align: justify;
+  padding: 50px;
+}
+
+#btnCTA {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: 900;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  background: #e6bc4a;
+  color: white;
+}
+
+#btnCTA img {
+  width: 55px;
+  margin-right: 12px;
+}
+
+#keyStats {
+  margin-bottom: 70px;
+}
+
+#keyStats h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+#keyStats h2::before,
+#keyStats h2::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ffffff;
+}
+
+#keyStats ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+#keyStats li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#keyStats li img {
+  width: 120px;
+  padding: 14px;
+  flex: 0 0 auto;
+}
+
+#keyStats .statValue {
+  color: #e6bc4a;
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+#keyStats .statDesc {
+  margin-top: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+#keyStats li:nth-child(even) {
+  justify-content: flex-end;
+}
+
+#keyStats li:nth-child(even) img {
+  order: 2;
+}
+
+#keyStats li:nth-child(even) .statText {
+  text-align: right;
+}
+
+#teams {
+  max-width: 560px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+#teams h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+#teams h2 span:first-child {
+  font-size: 2.8rem;
+}
+
+#teamList {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  overflow-x: auto;
+  padding-bottom: 16px;
+}
+
+#teamList::-webkit-scrollbar {
+  height: 8px;
+}
+
+#teamList::-webkit-scrollbar-track {
+  background: #9f9f9f;
+  border-radius: 50px;
+}
+#teamList::-webkit-scrollbar-thumb {
+  background: #e5e5e5;
+  border-radius: 50px;
+}
+
+#teamList article {
+  padding: 22px 18px;
+  min-width: 200px;
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+}
+
+#teamList article + article {
+  border-left: 1px solid #ffffff;
+}
+
+#teamList article img {
+  width: 73px;
+  height: 73px;
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 10px;
+}
+
+#teamList article h2 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+#downloadForm {
+  max-width: 320px;
+  margin: 60px auto 40px;
+  background: #e6bc4a;
+  border-radius: 20px;
+
+  padding: 26px 20px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #ffffff;
+}
+
+#downloadForm h2 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.formGroup {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.formGroup label,
+#downloadForm > label {
+  font-weight: 600;
+}
+
+#downloadForm > label {
+  text-align: center;
+}
+
+#downloadForm input[type="text"],
+#downloadForm input[type="email"] {
+  height: 25px;
+  border-radius: 50px;
+  border: none;
+  padding: 0 12px;
+  font-size: 0.85rem;
+}
+
+#downloadForm input[type="checkbox"],
+#downloadForm input[type="radio"] {
+  height: 18px;
+  accent-color: #000000;
+}
+
+#downloadForm button {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  background: #ffffff;
+
+  color: #000000;
+  border: none;
+  font-weight: 900;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+#downloadForm button img {
+  width: 52px;
+  margin-right: 12px;
+}
+
+#messageContainer {
+  display: none;                
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  background: rgba(255,255,255,0.35);
+  color: #5a1a00;
+}
+
+#messageContainer:not(:empty) {
+  display: block;
+}
+
+#messageContainer progress {
+  width: 100%;
+  height: 10px;
+  border: none;
+  border-radius: 50px;
+  background: rgba(255,255,255,0.4);
+}
+
+#messageContainer progress::-webkit-progress-value {
+  background: #ffffff;
+  border-radius: 50px;
+}
+
+#messageContainer progress::-webkit-progress-bar {
+  background: rgba(255,255,255,0.4);
+}
+
+#messageContainer progress::-moz-progress-bar {
+  background: #ffffff;
+}
+
+
+footer {
+  background-color: #FFFFFF;
+  color: #183c78;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 900px) {
+  section#introduction {
+    max-width: 1100px;
+    margin-top: 5rem;
+    margin-bottom: 14rem;
+    gap: 26px;
+  }
+
+  #catchphrase {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: 5.5rem;
+    padding-left: 12rem;
+  }
+
+  #catchypart > img {
+    right: 280px;
+    width: 10rem;
+    transform: rotate(-12deg);
+  }
+
+  #introDescription {
+    max-width: 720px;
+    padding: 2rem 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  #btnCTA {
+    justify-content: center;
+    width: 23rem;
+    font-size: 1.1rem;
+    transition: 0.2s;
+
+    position: relative;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+  }
+
+  #btnCTA:hover {
+    box-shadow: 0 0 6px rgba(230, 188, 74, 0.8),
+      0 0 14px rgba(230, 188, 74, 0.65), 0 0 28px rgba(230, 188, 74, 0.45);
+  }
+
+  #btnCTA img {
+    width: 4rem;
+    margin-right: 14px;
+    padding: 0.5rem;
+    box-sizing: content-box;
+  }
+
+  #keyStats {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto 80px;
+
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    padding: clamp(40px, 4vw, 70px) clamp(18px, 3vw, 40px);
+    min-height: 650px;
+    height: clamp(650px, 75vw, 900px);
+  }
+
+  #keyStats::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  #keyStats::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: clamp(90px, 12vw, 140px);
+    height: clamp(90px, 12vw, 140px);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #keyStats h2 {
+    position: absolute;
+    top: clamp(-18px, -1.4vw, -10px);
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0 18px;
+    background: #183c78;
+    font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+    font-weight: 900;
+    text-align: center;
+  }
+
+  #keyStats ul {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    z-index: 1;
+  }
+
+  #keyStats li {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: clamp(6px, 1vw, 10px);
+    max-width: min(46%, 520px);
+  }
+
+  #keyStats li img {
+    width: clamp(60px, 7vw, 95px);
+    height: auto;
+    flex: 0 0 auto;
+  }
+
+  #keyStats .statText {
+    max-width: 38ch;
+  }
+
+  #keyStats .statValue {
+    font-size: clamp(1.4rem, 3vw, 2.4rem);
+    line-height: 1;
+  }
+
+  #keyStats .statDesc {
+    font-size: clamp(0.9rem, 1.35vw, 1.05rem);
+    line-height: 1.25;
+  }
+
+  #keyStats li:nth-child(1) {
+    top: 16%;
+    left: 10%;
+  }
+
+  #keyStats li:nth-child(2) {
+    top: 33%;
+    right: 10%;
+    flex-direction: row;
+    text-align: right;
+  }
+
+  #keyStats li:nth-child(3) {
+    top: 58%;
+    left: 16%;
+  }
+
+  #keyStats li:nth-child(4) {
+    top: 75%;
+    right: 16%;
+    flex-direction: row;
+    text-align: right;
+  }
+
+  #teams {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  #teamList {
+    grid-auto-columns: minmax(260px, 1fr);
+  }
+
+  #teamList article {
+    min-width: 260px;
+    padding: 26px 22px;
+  }
+
+  #teamList article img {
+    width: 86px;
+    height: 86px;
+  }
+
+  #teamList article h2 {
+    font-size: 1.25rem;
+  }
+
+  #downloadForm {
+    max-width: 520px;
+    margin: 80px auto 60px;
+    padding: 44px 44px 48px;
+    border-radius: 28px;
+    gap: 28px;
+  }
+
+  #downloadForm h2 {
+    font-size: 2.1rem;
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+
+  .formGroup {
+    gap: 18px;
+  }
+
+  .formGroup label,
+  #downloadForm > label {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  #downloadForm input[type="text"],
+  #downloadForm input[type="email"] {
+    height: 40px;
+    border-radius: 999px;
+    padding: 0 16px;
+    font-size: 1rem;
+  }
+
+  #downloadForm input[type="checkbox"] {
+    transform: scale(1.35);
+    margin-bottom: 15px;
+  }
+
+  #downloadForm button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 18px;
+    background: #ffffff;
+    border: none;
+
+    font-weight: 900;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    text-align: left;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+  }
+
+  #downloadForm button img {
+    width: 62px;
+    margin-right: 0;
+  }
+
+  #downloadForm button:hover{
+  background-color: #e3e3e3;  
+  transform: translateY(-2px);
+}
 }
